@@ -160,7 +160,9 @@ void checkHTTPResponse() {
   // mocht de server na het antwoord toch zelf niet
   // de verbinding hebben verbroken, doe het dan maar zelf
   if (!client.connected()) {
-    Serial.println("\nDe verbinding met de server is verbroken");
+    Serial.println("");
+    Serial.println("---------EINDE ANTWOORD VAN DE SERVER----------");
+    Serial.println("De verbinding met de server is verbroken");
     client.stop();
   }
 }
@@ -236,4 +238,3 @@ void setWiFiLED(uint8_t rood, uint8_t groen, uint8_t blauw) {
   WiFiDrv::analogWrite(26, groen);
   WiFiDrv::analogWrite(25, rood);
 }
-
