@@ -212,18 +212,18 @@ void verbindMetWiFiNetwerk() {
 
 
 void printWiFiStatus() {
-  // print the SSID of the network you're attached to:
+  // print de naam van het netwerk waarmee je verbonden bent:
   Serial.print("SSID: ");
   Serial.println(WiFi.SSID());
 
-  // print your board's IP address:
+  // print het IP-adres dat je Arduino heeft gekregen:
   IPAddress ip = WiFi.localIP();
-  Serial.print("IP Address: ");
+  Serial.print("IP-adres: ");
   Serial.println(ip);
 
-  // print the received signal strength:
+  // print de sterkte van het signaal:
   long rssi = WiFi.RSSI();
-  Serial.print("signal strength (RSSI):");
+  Serial.print("Signaalsterkte (RSSI):");
   Serial.print(rssi);
   Serial.println(" dBm");
 }
@@ -231,10 +231,10 @@ void printWiFiStatus() {
 
 // stel de kleur van de RGB led in
 void setWiFiLED(uint8_t rood, uint8_t groen, uint8_t blauw) {
-  WiFiDrv::pinMode(25, OUTPUT);  //GREEN
-  WiFiDrv::pinMode(26, OUTPUT);  //RED
-  WiFiDrv::pinMode(27, OUTPUT);  //BLUE
-  WiFiDrv::analogWrite(27, blauw);
-  WiFiDrv::analogWrite(26, groen);
+  WiFiDrv::pinMode(25, OUTPUT);
+  WiFiDrv::pinMode(26, OUTPUT);
+  WiFiDrv::pinMode(27, OUTPUT);
   WiFiDrv::analogWrite(25, rood);
+  WiFiDrv::analogWrite(26, groen);
+  WiFiDrv::analogWrite(27, blauw);
 }
