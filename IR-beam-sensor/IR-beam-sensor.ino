@@ -9,7 +9,7 @@ const int ledPin 13
 const int sensorPin 4
 
 // variables will change:
-int sensorStatus = LOW;    // de MEEST RECENTE waarde van de sensor
+int sensorStatus = LOW;      // de MEEST RECENTE waarde van de sensor
 int vorigeStatus = LOW;      // de VORIGE waarde van de sensor
 
 void setup() {
@@ -19,7 +19,7 @@ void setup() {
   // stel de sensorPin in als INPUT
   pinMode(sensorPin, INPUT);
 
-  /* lijkt raar, maar hiermee staat de sensor
+  /* dit lijkt raar, maar hiermee staat de sensor
      standaard hoog, tenzij deze door onderbreking
      op laag schiet. Dit had je ook kunnen doen door
      deze regel weg te halen en de sensorpin via een
